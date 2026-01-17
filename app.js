@@ -34,8 +34,8 @@ mongoose.connect(process.env.MONGODB_URI)
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req,res) => {
-  app.use(express.static(path.resolve(__dirname,"client","build")));
-  res.sendFile(path.resolve(__dirname,"client","build","index.html"));
+  app.use(express.static(path.resolve(__dirname, "client", "build")));
+  res.sendFile(path.resolve(__dirname, "client", "build","index.html"));
 });
 
 app.listen(PORT, () => {
